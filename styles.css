@@ -1,53 +1,273 @@
+/*General styling*/
+:root {
+  --bg-dark: radial-gradient(
+    circle at top,
+    #1c1f26 0%,
+    #0f1115 70%
+  );
+
+  --bg-light: #f5f7fa;
+  --bg-card: #ffffff;
+
+  --accent: #3b82f6;
+  --accent-muted: rgba(77, 171, 247, 0.25);
+
+  --text-light: #ffffff;
+  --text-muted-dark: #a0a5b1;
+  --text-main: #212529;
+
+  --shadow-soft: 0 14px 40px rgba(0,0,0,0.12);
+}
+
+/* Index/ landing page*/
 body {
+  background: #ffffff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.intro-card {
+  max-width: 900px;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  background: none;
+  box-shadow: none;
+}
+
+.intro-row {
+  display: flex;
+  align-items: flex-start; 
+  gap: 3rem;
+  max-width: 100%;
+}
+
+.about-row {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 3rem;
+
+  max-width: 1200px;
+  margin-left: 5rem;
+  margin-right: auto;
+  align-items: start;
+}
+
+
+.intro-text {
+  flex: 1;
+  min-width: 0;
+  max-width: none;
+}
+
+.intro-text h3 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.75rem;
+  text-align: left;
+}
+
+.intro-text h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 2px;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+@media (max-width: 768px) {
+  .intro-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-text {
+    text-align: center;
+  }
+}
+
+.profile-pic {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+}
+html, body {
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
 }
+
+/* Page Header index*/
+.page-header.landing {
+  min-height: auto;
+  background: radial-gradient(
+    circle at top,
+    #1c1f26 0%,
+    #0f1115 70%
+  );
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+}
+
+.page-header.landing h1 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.page-header.landing h5 {
+  color: var(--text-muted-dark);
+  font-weight: 500;
+}
+
+.page-header.landing p {
+  color: var(--text-muted-dark);
+  line-height: 1.6;
+}
+
+/*below header*/
+.bg-white {
+  background: #ffffff;
+  padding-bottom: 3rem;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  border-color: var(--accent);
+  color: var(--text-main);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.section-divider {
+  width: 40%;
+  max-width: 360px;
+  height: 2px;
+  margin: 4rem auto 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--accent),
+    transparent
+  );
+  opacity: 0.6;
+}
+
+
+/* About me and icon design */
+.about-wrapper {
+  max-width: 1320px;   /* ← wider, modern layout */
+  width: 100%;
+  padding: 0 2rem;     /* keeps edges clean */
+}
+
+.about-wide {
+  max-width: 1310px;   /* give the page more room */
+  margin: 0 auto;      /* keep it centered */
+  padding: 0 2rem;     /* breathing room on the sides */
+}
+
+/* ONLY affects About page because .about-wide wraps it */
+.about-wide .intro-card {
+  max-width: 1200px;   /* override your 900px cap */
+}
+
 .aboutme-icons {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
 }
 
 .aboutme-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4.5rem;
-    height: 4.5rem;
-    background: transparent;
-    font-size: 2.5rem;
-    border-radius: 50%;
-    color: var(--text-color);
-    margin: 3rem 1.5rem 3rem 0;
-    transition: 0.3s ease-in-out;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 2.4rem;
+  border-radius: 50%;
+  color: var(--text-main);
+  margin: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-/* General hover styling for all icons */
 .aboutme-icons a:hover {
-    color: var(--activelink-color);
-    transform: scale(1.2) translateY(-5px);
-    box-shadow: 0 0 25px var(--main-color);
-    background-color: var(--text-color);
+  transform: scale(1.15) translateY(-5px);
+  color: #ffffff;
 }
 
-/* Additional styling per icon */
 .aboutme-icons a.github:hover {
-    color: #ffffff;
-    background-color: #333;
-    box-shadow: 0 0 25px #333;
+  background-color: #333;
+  box-shadow: 0 0 22px #333;
 }
 
 .aboutme-icons a.linkedin:hover {
-    color: #ffffff;
-    background-color: #0a66c2;
-    box-shadow: 0 0 25px #0a66c2;
+  background-color: #0a66c2;
+  box-shadow: 0 0 22px #0a66c2;
 }
 
 .aboutme-icons a.email:hover {
-    color: #ffffff;
-    background-color: #ea4335; 
-    transform: scale(1.2) translateY(-5px);
-    box-shadow: 0 0 25px #ea4335;
+  background-color: #ea4335;
+  box-shadow: 0 0 22px #ea4335;
+}
+
+/* .about-photo {
+  width: 240px;
+  max-width: 100%;
+  max-height: 360px;
+  border-radius: 14px;
+  object-fit: contain;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  flex-shrink: 0;
+  margin-left: -4rem; 
+} */
+
+.about-photo {
+  width: 281px;          /* makes it larger */
+  height: auto;          /* prevents cropping */
+  flex-shrink: 0;        /* prevents layout squeeze */
+
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+
+  margin-right: 10rem;    /* space between image and text */
+}
+
+
+
+/* general layout*/
+.container {
+  max-width: 960px;
+}
+.content {
+  width: 100%;
+}
+html {
+  scroll-behavior: smooth;
 }

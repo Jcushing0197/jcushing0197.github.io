@@ -1,46 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Me | Justyn Cushing</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>About Me | Justyn Cushing</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
 
-<section id="about" class="container py-5">
-    <h3 class="mb-3">About Me</h3>
-    <p>
-        I’m a full-stack .NET developer specializing in C#, ASP.NET, Entity Framework, and SQL Server to
-        build internal web applications and services using Visual Studio Code, HTML, CSS, JavaScript, and Bootstrap.
-    </p>
-    <p>
-        My work includes implementing role-based permission, access logging, and secure handling of data changes, uploads, downloads, and reporting.
-    </p>
-    <p>
-        In addition to application development, I develop and maintain SSIS packages and SQL Server Agent jobs to transfer and synchronize
-        data between SQL Server and Microsoft Dynamics 365.
-    </p>
+    <header class="page-header landing text-center">
+        <div>
+            <h1 class="display-5 fw-bold"><span>About Me</span></h1>
+            <h5 class="mb-0">Developer · Analyst · Veteran</h5>
+        </div>
+    </header>
 
+    <main class="bg-white">
+        <section class="content pt-4 pb-2 about-wide">
+            <div class="about-wrapper">
+                <div class="intro-card">
 
-    <div class="aboutme-icons">
-        <a href="https://github.com/Jcushing0197/" class="github" target="_blank" aria-label="GitHub">
-        <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/justyn-cushing-24742b22a/" class="linkedin" target="_blank" aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="mailto:jcushing0197@gmail.com" class="email"  title="Email me">
-            <i class="fa-solid fa-envelope"></i>
-        </a>
-    </div>
+                    <div class="about-row">
+                        <img src="navy.png" class="about-photo" alt="Justyn Cushing"/>
 
-    <a href="index.html" class="btn btn-outline-dark mt-4">← Back Home</a>
-</section>
+                        <div class="intro-text">
+                            <h3 class="mb-3">Background & Experience</h3>
 
+                            <p class="text-muted">
+                            I’m a full-stack .NET developer specializing in C#, ASP.NET, Entity Framework,
+                            and SQL Server, building internal web applications and services using
+                            Visual Studio Code, HTML, CSS, JavaScript, and Bootstrap.
+                            </p>
+
+                            <p class="text-muted">
+                            I regularly design role-based permission systems, access logging, and secure data workflows,
+                            along with tools that support uploads, downloads, reporting, and automation.
+                            Most of my development work is centered around internal platforms built with
+                            Visual Studio Code, HTML, CSS, JavaScript, and Bootstrap.
+                            </p>
+
+                            <p class="text-muted">
+                            Beyond application development, I create and maintain SSIS packages and SQL Server Agent jobs
+                            to synchronize and upsert data between SQL Server and Microsoft Dynamics 365.
+                            As a Navy veteran currently completing a second bachelor’s degree in AI/ML data analytics,
+                            I approach development with a structured, analytical mindset shaped by both real-world operations and data-driven thinking.
+                            </p>
+                            <!-- Icons -->
+                            <div class="aboutme-icons">
+                                <a href="https://github.com/Jcushing0197/" class="github" target="_blank" aria-label="GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/justyn-cushing-24742b22a/" class="linkedin" target="_blank" aria-label="LinkedIn">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                                <a href="mailto:jcushing0197@gmail.com" class="email" title="Email me">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </a>
+                            </div>
+                            <div class="section-divider"></div>
+
+                            <nav class="text-center mt-4">
+                                <a href="index.html" class="btn btn-secondary">Back Home</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
-
